@@ -15,4 +15,8 @@ def Todoloyiha(request):
         "todo":Todo.objects.all()
     }
     return render(request,"todo.html",data)
-
+def todoochir(request,pk):
+    data={
+        "todo":Todo.objects.get(id=pk).delete()
+    }
+    return redirect("/todo/")

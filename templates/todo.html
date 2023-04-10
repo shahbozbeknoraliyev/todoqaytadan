@@ -58,8 +58,9 @@
   <div class="row">
 
     <div class="col-md-8">
-      <div class="card">
         {%for i in todo%}
+      <div class="card">
+
         <center><b>{{i.sarlavha}}</b></center>
         <hr/>
         {{i.vaqt}}
@@ -68,9 +69,11 @@
         <hr/>
         {{i.maqsad}}
         <br/>
-        {%endfor%}
-        <button class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span><a href="#">O'chirish</a></button>
+
+        <button class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span><a href="/delete/{{i.id}}">O'chirish</a></button>
+
       </div>
+      {%endfor%}
     </div>
     <div class="col-md-1"> </div>
     <div class="col-md-3" >
@@ -92,7 +95,12 @@
   <input type="text" name="m" placeholder="maqsadni kiritng">
   <button type="submit">qoshish</button>
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
 
 </html>
