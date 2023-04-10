@@ -3,6 +3,14 @@ from django.shortcuts import render,redirect
 from .models import *
 # Create your views here.
 def Todoloyiha(request):
+    if request.method=="POST":
+        Todo.objects.create(
+            sarlavha=request.POST.get('s'),
+            vaqt=request.POST.get('v'),
+            izoh=request.POST.get('i'),
+            maqsad=request.POST.get('m')
+        )
+        return redirect('/todo/')
     data={
         "todo":Todo.objects.all()
     }

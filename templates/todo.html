@@ -75,6 +75,7 @@
     <div class="col-md-1"> </div>
     <div class="col-md-3" >
       <div  class="submit_form">
+
       <form action="#" >
 
         <center>
@@ -84,6 +85,14 @@
     </div>
   </div>
 </div>
+<form action="/todo/" method="POST">{%csrf_token%}
+  <input type="text" name="s" placeholder="sarlavhani kiring">
+  <input type="time" name="v" placeholder="vaqtni kiring">
+  <input type="text" name="i" placeholder="izohni kiriting">
+  <input type="text" name="m" placeholder="maqsadni kiritng">
+  <button type="submit">qoshish</button>
+</form>
+
 </body>
 
 </html>
